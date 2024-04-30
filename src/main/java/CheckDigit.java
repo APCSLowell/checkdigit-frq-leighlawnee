@@ -7,11 +7,9 @@ public class CheckDigit
    */  
    public static int getCheck(int num) 
    {  
-     int j = 1;
      int sum = 0;
-     for(int i = getNumberOfDigits(num); i>=2; i--){
-     sum+=getDigit(num, j)*i;
-       j++;
+     for(int i = 1; i<=getNumberOfDigits(num); i++){
+     sum+=(8-i) * getDigit(num, i);
      }
      return sum%10;
    }
@@ -24,7 +22,7 @@ public class CheckDigit
    */     
    public static boolean isValid(int numWithCheckDigit)    
    {      
-     return getCheck(numWithCheckDigit/10)==(getCheck(numWithCheckDigit)%10);
+     return getCheck(numWithCheckDigit/10)==(numWithCheckDigit%10);
    }    
    
    /** Returns the number of digits in num. */    
