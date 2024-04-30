@@ -23,7 +23,7 @@ public class CheckDigit
    */     
    public static boolean isValid(int numWithCheckDigit)    
    {      
-     return getCheck(numWithCheckDigit/10)==getCheck(numWithCheckDigit);
+     return getCheck(numWithCheckDigit/10)==(getCheck(numWithCheckDigit)%10);
    }    
    
    /** Returns the number of digits in num. */    
