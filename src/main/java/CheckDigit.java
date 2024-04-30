@@ -12,7 +12,7 @@ public class CheckDigit
      sum+=getDigit(num, j)*i;
        j++;
      }
-     return getDigit(sum, getNumberOfDigits(sum));
+     return sum%10;
    }
  
   /** Returns true if numWithCheckDigit is valid, or false    
